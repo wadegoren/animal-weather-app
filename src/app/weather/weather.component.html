@@ -1,0 +1,37 @@
+<p class="container">
+<div class="row">
+  <div class="col-md-6">
+    <h3 class="text-center my-4">Animal Weather!</h3>
+    <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+      <div class="form-group">
+        <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation"
+          placeholder="Please input a Location (City, Country)" formControlName="location" /><br>
+      </div><br>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-md" (click)="resetImages()">
+          Search for the Weather!
+        </button><br>
+        <br>
+      </div>
+    </form>
+  </div>
+  <p [hidden]="isRainy" style="text-align:center"><img
+      src="https://images.saymedia-content.com/.image/t_share/MTc0NDg3MjUzODU3MzQ3MjA2/a-cat-in-the-rain-poem-for-cat-lovers.jpg"
+      alt="Raining" width="460" height="345"><br><STRONG>Raining</STRONG></p>
+  <p [hidden]="isClear" style="text-align:center"><img src="https://towerhillbathurstvet.ca/files/2021/08/Sun-dog.jpg"
+      alt="Clear Skies" width="500" height="345"><br><STRONG>Clear Skies</STRONG></p>
+  <p [hidden]="isSnowy" style="text-align:center"><img
+      src="https://blog.myollie.com/content/images/2020/12/grumpy-hound-in-a-coat-sits-in-snow.jpg" alt="Snowy Weather"
+      width="460" height="345"><br><STRONG>Snowing</STRONG></p>
+  <p [hidden]="isfreezingRain" style="text-align:center"><img
+      src="https://c8.alamy.com/comp/GBGKXM/small-dog-move-in-hail-stone-at-garden-after-hailstorm-GBGKXM.jpg"
+      alt="Freezing Rain" width="460" height="345"><br><STRONG>Freezing Rain</STRONG></p>
+  <p [hidden]="isCloudy" style="text-align:center"><img
+      src="https://images.unsplash.com/photo-1531128199540-a1be52aa48d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+      alt="cloudy" width="350" height="400"><br><STRONG>Cloudy</STRONG></p>
+  <p [hidden]="ispartlyCloudy" style="text-align:center"><img
+      src="https://c1.wallpaperflare.com/preview/374/538/353/dog-pet-outdoor-looking-out.jpg" alt="partly cloudy"
+      width="500" height="400"> <br><STRONG>Partly Cloudy</STRONG></p>
+  <p [hidden]="isMisty" style="text-align:center"><img
+      src="https://live.staticflickr.com/65535/50269131637_fb17a83ece_b.jpg" alt="foggy/misty" width="500" height="400">
+    <br><STRONG>Foggy or Misty</STRONG></p>
