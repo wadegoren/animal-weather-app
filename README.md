@@ -1,4 +1,5 @@
-# TribeApp
+# Animal Weather App
+Description - Search a locaton anywhere in the world, a picture of a cat or dog in that type of weather will then appear. Still a work in progress. Plan to add more functionality including different views. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
